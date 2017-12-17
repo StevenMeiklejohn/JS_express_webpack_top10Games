@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon server.js",
+    "webpack": "cd client && webpack -w"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +17,6 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
-    "mongodb": "^3.0.0-rc0"
+    "mongodb": "^2.2.33"
   }
 }

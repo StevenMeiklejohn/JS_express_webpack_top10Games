@@ -6,6 +6,8 @@ app.use(parser.json());
 app.use(parser.urlencoded({extended: true}));
 app.use(express.static('client/build'));
 
+app.use(require('./controllers/index'));
+
 var MongoClient = require("mongodb").MongoClient;
 MongoClient.connect("mongodb://localhost:27017/games", function(err, database){
   if(err){
@@ -22,6 +24,10 @@ MongoClient.connect("mongodb://localhost:27017/games", function(err, database){
 
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/client/build/index.html');
+});
+
+app.get('/game/:uid', function(req, res){
+  res.sendFile(__dirname + '/client/build/specificGame.html');
 });
 
 app.get('/games', function(req, res) {
