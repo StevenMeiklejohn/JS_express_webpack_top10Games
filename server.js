@@ -34,19 +34,23 @@ app.get('/about', function(req, res){
   res.sendFile(__dirname + '/client/build/about.html');
 });
 
+app.get('/edit', function(req, res){
+  res.sendFile(__dirname + '/client/build/edit.html');
+});
+
 app.get('/games', function(req, res) {
  var cursor = db.collection('games').find().toArray(function(err, results){
  res.json(results);
  });
 });
 
-app.post("/games", function(req, res){
+app.post("/edit", function(req, res){
   db.collection("games").save(req.body, function(err, result){
     if(err){
       return console.log(err);
     }
     console.log("Saved to database.");
-    res.redirect("/");
+    res.redirect("/about");
   });
 });
 

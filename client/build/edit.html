@@ -12,22 +12,26 @@
 
   <div id='cssmenu'>
   <ul>
-     <li class='active'><a href='#'><span>Home</span></a></li>
-     <li><a href='#'><span>Games</span></a></li>
-     <li><a href='#'><span>Edit</span></a></li>
-     <li class='last'><a href='#'><span>About</span></a></li>
+     <li class='active'><a href='/'><span>Home</span></a></li>
+     <li><a href='/'><span>Games</span></a></li>
+     <li><a href='/edit'><span>Edit</span></a></li>
+     <li class='last'><a href='/about'><span>About</span></a></li>
   </ul>
   </div>
 
 
+  <div class="intro">
+    <h1>Add a new game to the list.</h1>
+  </div>
 
 <div class="container">
-<form action="/title_pub" method="POST">
+<form action="/edit" method="POST">
   <input type="text" placeholder="rank" name="rank">
   <input type="text" placeholder="title" name="title">
   <input type="text" placeholder="publisher" name="publisher">
   <input type="text" placeholder="genre" name="genre">
   <input type="text" placeholder="review" name="review">
+  <input type="text" placeholder="image" name="image">
   <button type="submit">Submit</button>
 </form>
 <form action="/delete" method="POST">
