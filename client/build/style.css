@@ -34,6 +34,15 @@ body{
   margin-top: 5px;
 }
 
+.a {
+  background-color: grey;
+  width:70%;
+  height: 400px;
+  margin: auto;
+  margin-top: 5px;
+}
+
+
 .aboutdiv {
   position:relative;
   background-color: grey;
