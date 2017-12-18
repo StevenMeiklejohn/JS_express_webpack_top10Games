@@ -30,6 +30,10 @@ app.get('/game/:uid', function(req, res){
   res.sendFile(__dirname + '/client/build/specificGame.html');
 });
 
+app.get('/about', function(req, res){
+  res.sendFile(__dirname + '/client/build/about.html');
+});
+
 app.get('/games', function(req, res) {
  var cursor = db.collection('games').find().toArray(function(err, results){
  res.json(results);

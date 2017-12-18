@@ -11,8 +11,35 @@ GameView.prototype = {
     games.forEach( function(game){
 
       var listdiv = document.getElementById('list-container');
+      // var assignLink = function(rank, div){
+      //   div.onclick = function() {
+      //     window.location.href = "http://localhost:3000/game/" + rank;
+      //   };
+      // }
+      //
+      // assignLink(game.rank, listdiv);
+
+
+
+
+      // var gameRank = game.rank;
+      // if (typeof window.addEventListener==='function'){
+      //           listdiv.addEventListener('click',function(){
+      //           window.location.href = "http://localhost:3000/game/" + gameRank;
+      //       })};
+
+
+
+
+
+      // var newSpan = document.createElement('span');
+      // var link = document.createElement('a');
+      // link.setAttribute('href', "http://localhost:300/game/" + game.rank);
+      // newSpan.appendChild(link);
+      // listdiv.appendChild(newSpan);
+
       var infoTable = document.createElement("table");
-      infoTable.className = "gameTable";
+      infoTable.className = "gamesTable";
 
       var row1 = document.createElement("tr");
       var rank1 = document.createElement("td");
@@ -75,10 +102,12 @@ GameView.prototype = {
       image.src = "./images/" + game.image;
       infoTable.appendChild(image);
       listdiv.appendChild(infoTable);
-
     })
 
   }
+
+
+
 }
 
  module.exports = GameView;

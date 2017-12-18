@@ -9,9 +9,4 @@ router.get('/', function (req, res) {
 });
 
 
-
-router.get('/about', function(req, res){
-  res.json({data: "All about us!"});
-});
-
 module.exports = router;

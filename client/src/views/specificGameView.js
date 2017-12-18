@@ -70,7 +70,7 @@ SpecificGameView.prototype = {
 
 
       var image = document.createElement("img");
-      image.className = "gameImage";
+      image.className = "selectedGameImage";
       image.src = "../../images/" + game.image;
       infoTable.appendChild(image);
       listdiv.appendChild(infoTable);

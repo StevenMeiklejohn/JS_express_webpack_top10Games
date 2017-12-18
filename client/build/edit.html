@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Top Ten IOS Games Of All Time</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+  <script src="bundle.js"></script>
+</head>
+<body>
+
+  <div id='cssmenu'>
+  <ul>
+     <li class='active'><a href='#'><span>Home</span></a></li>
+     <li><a href='#'><span>Games</span></a></li>
+     <li><a href='#'><span>Edit</span></a></li>
+     <li class='last'><a href='#'><span>About</span></a></li>
+  </ul>
+  </div>
+
+
+
+<div class="container">
+<form action="/title_pub" method="POST">
+  <input type="text" placeholder="rank" name="rank">
+  <input type="text" placeholder="title" name="title">
+  <input type="text" placeholder="publisher" name="publisher">
+  <input type="text" placeholder="genre" name="genre">
+  <input type="text" placeholder="review" name="review">
+  <button type="submit">Submit</button>
+</form>
+<form action="/delete" method="POST">
+<button id="deleteButton" type="submit">Delete All</button>
+</form>
+</div>
+
+</body>
+</html>
